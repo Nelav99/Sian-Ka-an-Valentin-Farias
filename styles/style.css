@@ -1,0 +1,896 @@
+:root {
+    /* colors */
+    --primario-naranja: #FFA900;
+    --secunadrio-negro: rgba(39, 39, 39, 0.78);
+    --white: #fff;
+    --black: #000;
+    /* fonts */
+    --primary-font: 'Rambla', sans-serif;
+    --secondary-font: 'Lato', sans-serif;
+    --body-font: 'Lato', sans-serif;
+    /* Size */
+    /* mobile */
+    --fontTitleMobile: 36px;
+    --fontSubtitleMobile: 26px;
+    --fontBodyMobile: 22px;
+    --fontSmallMobile: 16px;
+    /* desktop */
+    --fontTitleDesktop: 55px;
+    --fontSubtitleDesktop: 44px;
+    --fontBodyDesktop: 32px;
+    --fontSmallDesktop: 24px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/*Inicio Página Home*/
+.bodyH {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400px;
+    font-family: var(--body-font);
+    background-image: url("../imagenes/fondoHome.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*navBar*/
+nav {
+    background-color: var(--secunadrio-negro);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav.navBar {
+    width: 100%;
+    height: 80px;
+    display: grid;
+    grid-template: 1fr / 1fr 2fr 1fr;
+    justify-items: center;
+}
+
+.menu {
+    display: none;
+}
+
+li a {
+    display: none;
+}
+
+.logo {
+    width: 240px;
+    height: 40px;
+    margin: 20px;
+    grid-area: 2 / 3, 1 / 2;
+    align-items: center;
+    justify-content: center;
+}
+
+i.fa-bars {
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    margin: 20px 35px;
+    grid-area: 1 / 2, 1 / 2;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 0;
+}
+
+.iconos {
+    display: flex;
+    flex-direction: row;
+}
+
+.iconos i {
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--white);
+    padding: 26px 5px;
+    height: 83px;
+}
+
+.iconos .facebook,
+.iconos .twitter,
+.iconos .youtube {
+    margin: 0 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+/*finNavBar*/
+
+/*ContenedorPrincipal*/
+.container {
+    background-color: var(--secunadrio-negro);
+    border-radius: 25px;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.textosInicio {
+    width: auto;
+}
+
+.titleText {
+    color: var(--primario-naranja);
+    margin: 20px 25px 5px 25px;
+    font-family: var(--primary-font);
+    font-size: var(--fontTitleMobile);
+}
+
+.textDescription {
+    display: none;
+}
+button a {
+    color: #FFA900;
+    list-style: none;
+    text-decoration: none;
+}
+
+.buttonC {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.bConocer {
+    border: transparent;
+    background-color: transparent;
+    color: var(--primario-naranja);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: var(--fontSubtitleMobile);
+    letter-spacing: 0.1px;
+    display: inline-block;
+    margin: 10px 25px;
+}
+
+/*Form*/
+.cont-form {
+    color: white;
+    background-color: #272727;
+    width: 100%;
+    height: 80%;
+    border-radius: 25px;
+    margin: 5px 0 0 0;
+    /* justify-content: center; */
+} 
+
+h2 {
+    font-size: 40px;
+    font-family: var(--primary-font);
+    margin: 15px 30px;
+}
+
+form p {
+    font-size: var(--fontBodyMobile);
+    font-family: var(--body-font);
+    margin: 15px 30px;
+}
+
+.inputFormAl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.formInp {
+    width: 90%;
+    height: 48px;
+    font-size: var(--fontBodyMobile);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 10px 20px;
+    border-radius: 10px;
+    padding: 0px 16px;
+    background-color: #272727;
+    border: 1px solid white;
+}
+
+.formInp::placeholder {
+    color: #f9f9f9;
+}
+
+.enviar {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: var(--fontBodyMobile);
+    color: var(--white);
+    text-align: center;
+    background-color: var(--primario-naranja);
+    width: 90%;
+    height: 48px;
+    border-radius: 10px;
+    border: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px;
+}
+
+.aviso {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: var(--fontSmallMobile);
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+a.politicas {
+    color: #7E7BFF;
+    padding-left: 5px;
+}
+/*finForm*/
+/*finContenidoPrincipal*/
+
+/*footer*/
+.footH {
+    color: var(--white);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: var(--fontSmallMobile);
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+/*finFooter*/
+
+@media (max-width: 480px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+/* inicio navBar */
+    nav.navBar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .iconos {
+        display: none;
+    }
+
+    .logo {
+        width: 200px;
+        height: 40px;
+        margin: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navH:hover {
+        background-color: var(--primario-naranja);
+    }
+
+    .fa-bars:hover {
+        color: var(--black);
+    }
+    /* fin NnavBarHome */
+
+    /* contenidoPrincipalHome */
+    .container {
+        background-color: var(--secunadrio-negro);
+        border-radius: 25px;
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .textosInicio {
+        width: auto;
+    }
+
+    .titleText {
+        color: var(--primario-naranja);
+        margin: 20px 15px 5px 15px;
+        font-family: var(--primary-font);
+        font-size: 28px;
+    }
+
+    .buttonC {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .bConocer {
+        font-size: 20px;
+        margin: 5px 15px;
+    }
+
+    .cont-form {
+        color: white;
+        background-color: #272727;
+        width: auto;
+        height: auto;
+        border-radius: 25px;
+        margin: 5px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h2 {
+        font-size: 32px;
+        font-family: var(--primary-font);
+        margin: 15px;
+    }
+
+    form p {
+        font-size: 18px;
+        font-family: var(--body-font);
+        margin: 5px 15px;
+    }
+
+    .formInp {
+        margin: 10px 15px;
+    }
+
+    .enviar {
+        margin: 5px 15px 10px 15px;
+        font-size: 20px;
+    }
+
+    .aviso {
+        font-size: 14px;
+        margin: 5px 15px 15px 15px;
+    }
+    /* finContenidoPrincipalHome */
+    /* footerHome */
+    .footH {
+        font-size: 12px;
+        margin: 5px;
+    }
+    /* finFooterHome */
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    /* inicioNavBar */
+    nav.navBar {
+        width: 100%;
+        height: 83px;
+    }
+
+    .fa-brands:hover {
+        background-color: var(--primario-naranja);
+        height: 83px;
+        text-align: center;
+        color: var(--black);
+    }
+    .navH:hover {
+        background-color: var(--primario-naranja);
+    }
+
+    .fa-bars:hover {
+        color: var(--black);
+    }
+
+    .iconos .twitter {
+        display: none;
+    }
+    /* finNavBar */
+    /* contenidoPrincipalHome */
+    .titleText {
+        font-size: 40px;
+        margin: 20px 25px 10px 25px;
+    }
+
+    .textDescription {
+        display: none;
+        /* color: #fff;
+        font-family: var(--body-font);
+        font-size: var(--fontBodyMobile);
+        margin: 10px 25px;
+        display: flex; */
+    }
+
+    .bConocer {
+        font-size: 24px;
+        margin: 10px 25px;
+    }
+
+    .aviso {
+        margin: 10px 25px 25px 25px;
+    }
+    /* finContenidoPrincipalHome */
+}
+
+@media (min-width: 768px) {
+    /* inicioNavBar */
+    nav.navBar {
+        height: 83px;
+    }
+    .iconos .facebook {
+        font-size: 35px;
+        margin: 0 10px;
+    }
+
+    .iconos .twitter {
+        font-size: 35px;
+        margin: 0 10px;
+    }
+
+    .iconos .youtube {
+        font-size: 35px;
+        margin: 0 10px;
+    }
+    .fa-brands:hover {
+        background-color: var(--primario-naranja);
+        height: 83px;
+        text-align: center;
+        color: var(--black);
+    }
+    .navH:hover {
+        background-color: var(--primario-naranja);
+    }
+
+    .fa-bars:hover {
+        color: var(--black);
+    }
+    /* finNavBar */
+    /* contenidoPrincipalHome */
+    .titleText {
+        font-size: 46px;
+        margin: 20px 25px 10px 25px;
+    }
+
+    .textDescription {
+        color: #fff;
+        font-family: var(--body-font);
+        font-size: 30px;
+        margin: 10px 25px;
+        display: flex;
+    }
+
+    .bConocer {
+        font-size: 28px;
+        margin: 10px 25px;
+    }
+
+    h2 {
+        font-size: 50px;
+    }
+
+    form p {
+        font-size: 28px;
+    }
+    .inputFormAl {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .enviar {
+        width: 90%;
+        font-size: 28px;
+    }
+
+    .aviso {
+        font-size: 20px;
+        margin: 10px 25px 25px 25px;
+    }
+    /* finContenidoPrincipalHome */
+    /* footerHome */
+    .footH {
+        font-size: 20px;
+    }
+    /* finFooterHome */
+}
+
+@media (min-width: 1024px) {
+    /*navBar*/
+    .fa-bars {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav.navBar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu {
+        list-style: none;
+        display: flex;
+        height: 83px;
+        align-items: center;
+    }
+
+    li a {
+        color: var(--white);
+        font-size: 22px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        padding: 0 8px;
+        list-style: none;
+        text-decoration: none;
+    }
+
+    .efecHo a:hover {
+        background-color: var(--primario-naranja);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 83px;
+        color: var(--black);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .logo {
+        width: 180px;
+        height: 30px;
+        margin: 15px;
+    }
+
+    .navItems {
+        display: flex;
+        padding: 20px;
+    }
+
+    .iconos {
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+    }
+    .iconos i{
+        font-size: 35px;
+        text-align: center;
+        text-decoration: none;
+        color: var(--white);
+        padding: 20px 0;
+        height: 83px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .iconos a {
+        text-decoration: none;
+    }
+    
+    .iconos a i.fa-twitter {
+        display: flex;
+        font-size: 35px;
+        color: var(--white);
+        padding: 20px 0;
+        height: 83px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .fa-brands:hover {
+        background-color: var(--primario-naranja);
+        height: 83px;
+        text-align: center;
+        color: var(--black);
+    }
+
+    .twitter .fa-twitter:hover {
+        color: var(--black);
+    }
+    /*finNavBar*/
+
+    /*ContenedorPrincipal*/
+    .container {
+        background-color: var(--secunadrio-negro);
+        border-radius: 25px;
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        margin: 20px;
+    }
+
+    .textosInicio {
+        width: 60%;
+    }
+
+    .titleText {
+        font-size: 48px;
+    }
+
+    .textDescription {
+        font-size: 26px;
+    }
+    /*Form*/
+    .cont-form {
+        color: white;
+        background-color: #272727;
+        width: 40%;
+        height: 80vh;
+        border-radius: 25px;
+        margin: 0;
+        padding: 0;
+    } 
+
+    h2 {
+        font-size: 50px;
+        font-family: var(--primary-font);
+        margin: 10px 30px;
+    }
+
+    form p {
+        font-size: 22px;
+        font-family: var(--body-font);
+        margin: 10px 30px;
+    }
+
+    .enviar {
+        width: 90%;
+    }
+
+    .aviso {
+        font-size: 15px;
+        margin: 8px;
+    }
+    /*finForm*/
+    /*finContenidoPrincipal*/
+
+    /*footer*/
+    .footH {
+        font-size: var(--fontSmallDesktop);
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    /*finFooter*/
+}
+
+@media (min-width: 1280px) {
+    .fa-bars {
+        display: none;
+    }
+    /*navBar*/
+    nav {
+        background-color: var(--secunadrio-negro);
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    nav.navBar {
+        width: 100%;
+        height: 83px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu {
+        list-style: none;
+        display: flex;
+        padding: 0;
+        margin: 0;
+        height: 83px;
+        align-items: center;
+    }
+
+    li a {
+        color: var(--white);
+        font-size: 24px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        display: flex;
+        /*align-items: center;
+        justify-items: center;
+        text-align: center;*/
+        padding: 0 18px;
+        list-style: none;
+        text-decoration: none;
+    }
+
+    .efecHo a:hover {
+        background-color: var(--primario-naranja);
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 80px;
+        color: var(--black);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .logo {
+        width: 250px;
+        height: 40px;
+        margin: 15px 20px;
+    }
+
+    .navitems {
+        display: flex;
+        padding: 20px;
+    }
+
+    .iconos i{
+        font-size: 40px;
+        text-align: center;
+        text-decoration: none;
+        color: var(--white);
+        padding: 20px 5px;
+        height: 83px;
+    }
+
+    .iconos a {
+        text-decoration: none;
+    }
+    
+    .iconos a i.fa-twitter {
+        display: flex;
+        font-size: 40px;
+        color: var(--white);
+        padding: 20px 5px;
+        height: 83px;
+    }
+
+    .fa-brands:hover {
+        background-color: var(--primario-naranja);
+        height: 83px;
+        text-align: center;
+        color: var(--black);
+    }
+    /*finNavBar*/
+
+    /*ContenedorPrincipal*/
+    .container {
+        background-color: var(--secunadrio-negro);
+        border-radius: 25px;
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        margin: 30px 20px 20px 20px;
+    }
+
+    .textosInicio {
+        width: 70%;
+    }
+
+    .titleText {
+        color: var(--primario-naranja);
+        margin: 25px;
+        font-family: var(--primary-font);
+        font-size: var(--fontTitleDesktop);
+    }
+
+    .textDescription {
+        color: #fff;
+        font-family: var(--body-font);
+        font-size: var(--fontBodyDesktop);
+        margin: 10px 25px;
+        display: flex;
+    }
+    button a {
+        color: #FFA900;
+        list-style: none;
+        text-decoration: none;
+        margin: 0;
+    }
+
+    .buttonC {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .bConocer {
+        border: transparent;
+        background-color: transparent;
+        color: var(--primario-naranja);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 26px;
+        letter-spacing: 0.1px;
+        display: inline-block;
+    }
+
+    /*Form*/
+    .cont-form {
+        color: white;
+        background-color: #272727;
+        width: 40%;
+        height: 80vh;
+        border-radius: 25px;
+        margin: 0;
+        padding: 0;
+    } 
+
+    h2 {
+        font-size: 70px;
+        font-family: var(--primary-font);
+        margin: 15px 30px;
+    }
+
+    form p {
+        font-size: var(--fontBodyDesktop);
+        font-family: var(--body-font);
+        margin: 15px 30px;
+    }
+
+    .formInp {
+        width: 90%;
+        height: 48px;
+        font-size: 24px;
+        font-style: italic;
+    }
+
+    .formInp::placeholder {
+        color: #f9f9f9;
+    }
+
+    .enviar {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 26px;
+        color: var(--white);
+        text-align: center;
+        background-color: var(--primario-naranja);
+        width: 90%;
+        height: 50px;
+        border-radius: 10px;
+        border: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .aviso {
+        font-size: 18px;
+        margin: 10px;
+    }
+
+    a.politicas {
+        color: #7E7BFF;
+        padding-left: 5px;
+    }
+    /*finForm*/
+    /*finContenidoPrincipal*/
+
+    /*footer*/
+    .footH {
+        color: var(--white);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: var(--fontSmallDesktop);
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    /*finFooter*/
+}
